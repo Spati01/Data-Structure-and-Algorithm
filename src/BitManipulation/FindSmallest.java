@@ -1,4 +1,4 @@
-package BitsManipulation;
+package BitManipulation;
 
 public class FindSmallest {
     public static int getSmallest(int n) {
