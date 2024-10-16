@@ -31,7 +31,8 @@ public class CheckIfTwoStringArraysAreEquivalent {
         }
     }
 
-
+  // TC : O(n)
+    // SC : O(1)
 
     class Solution {
         public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
