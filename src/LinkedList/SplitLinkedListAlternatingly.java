@@ -3,6 +3,8 @@ package LinkedList;
 public class SplitLinkedListAlternatingly {
 
 
+    // ********* Method 1 ******
+
 
 
     class Node
@@ -18,7 +20,7 @@ public class SplitLinkedListAlternatingly {
     };
 
 
-    class Solution {
+    class Solution0 {
         // Function to append a new node with newData at the end of a linked list
         Node[] alternatingSplitList(Node head) {
             // code here
@@ -60,11 +62,34 @@ public class SplitLinkedListAlternatingly {
 
         }
 
+}
+
+ // ****** Method 2  *********
+    class Solution {
+        // Function to append a new node with newData at the end of a linked list
+        Node[] alternatingSplitList(Node head) {
+            // code here
+
+            Node[] node = new Node[2];
+            Node temp1 = head;
+            Node temp2 = head.next;
+
+            node[0] = temp1;
+            node[1] = temp2;
+
+            while(temp2!=null && temp2.next != null){
+                temp1.next = temp2.next;
+                temp1 = temp1.next;
+                temp2.next = temp1.next;
+                temp2 = temp2.next;
+            }
+            temp1.next = null;
+
+            return node;
+
+        }
+    }
+
     }
 
 
-
-
-
-
-}
