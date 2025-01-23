@@ -58,3 +58,10 @@ public class Clone_a_linked_list_with_next_and_random_pointer {
     }
 
 }
+
+/*
+  Key Points for implementation clone of LinkedList :->
+ 1. Inserting new node in between
+ 2.setting random pointer of new Node
+ 3. Separating both the linkedList
+ */
