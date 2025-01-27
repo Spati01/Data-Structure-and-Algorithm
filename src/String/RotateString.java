@@ -23,4 +23,13 @@ public class RotateString {
             return part1 + part2;
         }
     }
+
+    class Solution1 {
+        public boolean rotateString(String s, String goal) {
+
+            if(s.length() != goal.length())return false;
+
+            return (s+s).contains(goal);
+        }
+    }
 }
