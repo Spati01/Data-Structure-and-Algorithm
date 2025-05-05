@@ -1,6 +1,12 @@
 package Searching;
 
+import java.sql.Time;
+import java.util.HashMap;
+
 public class SearchInAnAlmostSortedArray {
+
+
+  /*  Time : O(log n)  Space O(1)  */
 
     // User function Template for Java
     class Solution {
@@ -33,6 +39,8 @@ public class SearchInAnAlmostSortedArray {
     }
 
 
+    /* Time : O(n)  Space O(1) */
+
     class Solver {
         public int findTarget(int arr[], int target) {
 
@@ -42,6 +50,23 @@ public class SearchInAnAlmostSortedArray {
             }
             return -1;
 
+        }
+    }
+
+             /* Using space--
+             *  Time : O(n)  Space O(N)   */
+
+
+    class Problem {
+        public int findTarget(int arr[], int target) {
+            // code here
+
+            HashMap<Integer, Integer> map = new HashMap<>();
+
+            for(int i=0; i<arr.length; i++){
+                map.put(arr[i], i);
+            }
+            return map.containsKey(target) ? map.get(target) : -1;
         }
     }
 }
