@@ -15,4 +15,4 @@ public class GameOfXOR {
         return arr.length % 2 == 0 ? 0 : xor;
     }
 }
-}
+
